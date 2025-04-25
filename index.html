@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="output.css" rel="stylesheet">
+    <style>
+        @keyframes glowing-border {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(0, 255, 255, 0.15), 0 0 10px rgba(0, 255, 255, 0.15), 0 0 15px rgba(0, 255, 255, 0.15);
+                border-color: rgba(0, 255, 255, 0.15);
+            }
+            50% {
+                box-shadow: 0 0 25px rgba(0, 255, 255, 0.85), 0 0 40px rgba(0, 255, 255, 0.85), 0 0 60px rgba(0, 255, 255, 0.85);
+                border-color: rgba(0, 255, 255, 0.85);
+            }
+        }
+        .glowing-border {
+            border: 4px solid rgba(0, 255, 255, 0.2);
+            animation: glowing-border 2s infinite alternate;
+        }
+
+        @keyframes glowing-border-smaller {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(0, 255, 255, 0.15), 0 0 10px rgba(0, 255, 255, 0.15), 0 0 15px rgba(0, 255, 255, 0.15);
+                border-color: rgba(0, 255, 255, 0.15);
+            }
+            50% {
+                box-shadow: 0 0 10px rgba(0, 255, 255, 0.85), 0 0 15px rgba(0, 255, 255, 0.85), 0 0 20px rgba(0, 255, 255, 0.85);
+                border-color: rgba(0, 255, 255, 0.85);
+            }
+        }
+        .glowing-border-smaller {
+            border: 4px solid rgba(0, 255, 255, 0.2);
+            animation: glowing-border-smaller 2s infinite alternate;
+        }
+
+        .glowing-img {
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-sky-200 flex items-center justify-center align-middle">
+    <div class="main h-[650px] w-[600px] md:h-[550px] lg:h-[550px] mt-32 md:mt-48 lg:mt-10 rounded-4xl relative z-10 shadow-2xl shadow-black">
+        <div class="header mt-10 h-52 w-full px-10 text-center flex gap-5">
+            <div class="img overflow-hidden h-full w-1/2 md:w-60 lg:w-60 rounded-full flex justify-center items-center">
+                <div class="img h-40 w-40 glowing-border-smaller rounded-full">
+                    <img src="profile_pic.png" class="h-full w-full object-fill">
+                </div>
+            </div>
+            <div class="para flex justify-center items-center h-full w-1/2">
+                <a href="Resume_April2025.pdf" target="_blank"><img src="resume_logo.png" class="h-10 w-8 m-5 transition transform duration-300 hover:scale-105 hover:cursor-pointer"></a>
+                <a href="Resume_April2025.pdf" target="_blank"><p class="text-gray-700 font-bold font-sans transition transform duration-300 hover:scale-105 hover:cursor-pointer">MY RESUME</p></a>
+            </div>
+        </div>
+        <div class="box1 h-32 w-full flex justify-evenly items-center flex-col md:flex-row lg:flex-row gap-5 md:gap-0 lg:gap-0">
+            <a href="https://www.linkedin.com/in/shivayan-chakravarty-806702294/" target="_blank"><div class="box h-20 w-60 shadow-2xl rounded-3xl overflow-hidden flex transition transform duration-400 hover:scale-[1.04]">
+                <div class="img h-full w-1/3 flex justify-center items-center ml-5">
+                    <img src="linkedin_logo.png" class="h-16 w-16 object-fill block">
+                </div>
+                <p class="text-gray-700 font-bold w-2/3 text-center my-auto text-2xl">LinkedIn</p>
+            </div></a>
+            <a href="https://www.instagram.com/_shivayan09_/" target="_blank"><div class="box h-20 w-60 shadow-2xl rounded-3xl overflow-hidden flex transition transform duration-400 hover:scale-[1.04]">
+                <div class="img h-full w-1/3 flex justify-center items-center ml-5">
+                    <img src="insta_logo_blue.png" class="h-16 w-16 object-fill block">
+                </div>
+                <p class="text-gray-700 font-bold w-2/3 text-center my-auto text-2xl">Instagram</p>
+            </div></a>
+        </div>
+        <div class="box1 h-32 w-full flex justify-evenly items-center flex-col md:flex-row lg:flex-row gap-5 md:gap-0 lg:gap-0 mt-20 md:mt-0 lg:mt-0">
+            <a href="https://github.com/Shivayan09" target="_blank"><div class="box h-20 w-60 shadow-2xl rounded-3xl overflow-hidden flex transition transform duration-400 hover:scale-[1.04]">
+                <div class="img h-full w-1/3 flex justify-center items-center ml-5">
+                    <img src="github_logo_blue.png" class="h-16 w-16 object-fill block">
+                </div>
+                <p class="text-gray-700 font-bold w-2/3 text-center my-auto text-2xl">GitHub</p>
+            </div></a>
+            <a href="shivayanchak@gmail.com" target="_blank" class="block"><div class="box h-20 w-60 shadow-2xl rounded-3xl overflow-hidden flex transition transform duration-400 hover:scale-[1.04]">
+                <div class="img h-full w-1/3 flex justify-center items-center ml-5">
+                    <img src="gmail_logo_blue.png" class="h-16 w-16 object-fill block">
+                </div>
+                <p class="text-gray-700 font-bold w-2/3 text-center my-auto text-2xl">Email</p>
+            </div></a>
+        </div>
+    </div>
+    <div class="bg-box1 h-1/2 w-1/3 rounded-br-full bg-cyan-500 absolute top-0 left-0 hidden md:block lg:block rounded-2xl"></div>
+    <div class="bg-box1 h-1/2 w-1/3 rounded-tl-full bg-cyan-500 absolute bottom-0 right-0 hidden md:block lg:block rounded-2xl"></div>
+</body>
+</html>
